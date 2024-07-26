@@ -1,10 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: Roboto;
   display: flex;
   flex-direction: column;
@@ -62,27 +66,32 @@ header img {
 }
 #hero-content h1 {
   font-size: 48px;
-  width: 400px;
   color: white;
+  max-width: 500px;
   font-weight: 400;
+  padding-bottom: 20px;
 }
 #hero-content p {
-  width: 400px;
   font-size: 21px;
+  max-width: 500px;
+  padding-bottom: 70px;
   color: white;
-  padding-bottom: 60px;
 }
 
 #hero-content button {
   background-color: transparent;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
-  border-top: none;
-  border-right: none;
+  border: 1px solid white;
   color: white;
-  padding: 20px 40px;
+  padding: 20px 50px;
   font-size: 14.5px;
   cursor: pointer;
+  position: relative;
+}
+.button-arrow {
+  position: absolute;
+  right: 20px;
+  scale: 2;
+  color: rgb(48, 196, 255);
 }
 
 #hero-content button:hover {
@@ -99,38 +108,42 @@ header img {
   color: rgb(48, 196, 255);
   padding: 10px;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 28.5px;
+  margin-bottom: 20px;
 }
 
 .image-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100%;
-
   text-align: left;
   gap: 25px;
 }
 
 .image {
-  background-color: rgba(211, 211, 211, 0.11);
+  background-color: rgba(211, 211, 211, 0.246);
   display: flex;
   flex-direction: column;
-  height: 600px;
   align-items: flex-start;
-  padding: 0px 0px;
+  padding-bottom: 50px;
   font-size: 18.5px;
   overflow: hidden;
+  gap: 20px;
+}
+.text-wrapper {
+  padding: 30px;
 }
 .image h2 {
   font-weight: 550;
+  padding-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 20px;
 }
 
 .image li {
-  line-height: 40px;
-  margin-bottom: 20px;
+  line-height: 20px;
   text-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .image img {
@@ -170,18 +183,17 @@ header img {
 
 #advantages {
   padding-inline: 50px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 #advantages h1 {
-  font-size: 36px;
+  font-size: 28.5px;
   text-align: center;
   color: rgb(48, 196, 255);
   font-weight: 500;
-  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .teachers {
@@ -189,7 +201,7 @@ header img {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 34px;
-  background-color: rgba(211, 211, 211, 0.11);
+  background-color: rgba(211, 211, 211, 0.246);
 }
 .teachers .left {
   flex: 1;
@@ -203,13 +215,14 @@ header img {
 
 .teachers .left li,
 .students .right li {
-  line-height: 40px;
-  font-size: 18.5px;
+  line-height: 25px;
+  font-size: 16px;
 }
 
 .teachers .left h2,
 .students .right h2 {
-  font-size: 36px;
+  font-size: 28.5px;
+  padding-block: 40px;
   font-weight: 500;
 }
 
@@ -227,7 +240,7 @@ header img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(211, 211, 211, 0.11);
+  background-color: rgba(211, 211, 211, 0.246);
 }
 .students .left {
   flex: 1.5;
@@ -263,10 +276,11 @@ hr {
 }
 
 #institutes h1 {
-  font-size: 32px;
+  font-size: 28.5px;
   font-weight: 500;
   color: rgb(48, 196, 255);
   padding: 10px;
+  padding-bottom: 30px;
 }
 
 .institute-list {
@@ -329,20 +343,52 @@ footer p a {
   font-size: 42px;
 }
 
+@media only screen and (max-width: 400px) {
+  .teachers .right img {
+    display: none;
+  }
+  .students .left img {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 640px) {
+  #hero {
+    height: 500px;
+  }
   #hero-content {
     position: absolute;
     z-index: 2;
     padding: 50px;
   }
   #hero-content h1 {
-    font-size: 26.5px;
+    font-size: 36px;
     padding-top: 50px;
+  }
+  #hero-content p {
+    font-size: 18.5px;
+    padding-top: 16px;
   }
   #black-filter {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, black, transparent);
+  }
+  .institute-list {
+    grid-template-columns: 1fr;
+  }
+  .image-container {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    height: 500px;
+    font-size: 14.5px;
+  }
+  #arrow-to-top {
+    right: 20px;
+    bottom: 80px;
+    transform: scale(0.5);
   }
 }
 
