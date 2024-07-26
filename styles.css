@@ -9,12 +9,12 @@ html {
 }
 
 body {
-  font-family: Roboto;
+  font-family: "Mukta", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(128, 128, 128, 0.068);
+  background-color: #fafafa;
 }
 
 main {
@@ -31,7 +31,7 @@ header {
   background-color: white;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 4rem;
 }
 
 header img {
@@ -43,7 +43,6 @@ header img {
   height: 600px;
   width: 100%;
   position: relative;
-
   margin-bottom: 44px;
 }
 #hero img {
@@ -54,67 +53,73 @@ header img {
 #black-filter {
   position: absolute;
   z-index: 1;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  animation: gradient-in 15s ease-in;
   background: linear-gradient(to right, black, transparent);
 }
 
 #hero-content {
   position: absolute;
   z-index: 2;
-  padding: 75px;
+  height: 100%;
+  width: 50%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 #hero-content h1 {
-  font-size: 48px;
-  color: white;
-  max-width: 500px;
+  font-size: 3rem;
+  color: #ffffff;
   font-weight: 400;
-  padding-bottom: 20px;
+  line-height: 3rem;
 }
 #hero-content p {
-  font-size: 21px;
-  max-width: 500px;
-  padding-bottom: 70px;
+  padding-top: 1rem;
+  line-height: 1.8rem;
+  width: 80%;
+  font-weight: 300;
+  font-size: 1.5rem;
   color: white;
 }
 
 #hero-content button {
   background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 20px 50px;
+  border: 1px solid #f4f4f4;
+  color: #f4f4f4;
+  margin-top: 20px;
+  padding: 0.7rem;
+  width: 140px;
+  font-weight: 600;
   font-size: 14.5px;
   cursor: pointer;
   position: relative;
 }
-.button-arrow {
-  position: absolute;
-  right: 20px;
-  scale: 2;
-  color: rgb(48, 196, 255);
+#hero-content button span {
+  margin-left: 8px;
+}
+#hero-content button:hover span {
+  margin-left: 16px;
+  transition: all 0.2s ease;
 }
 
 #hero-content button:hover {
-  scale: 1.1;
-  border: 1px solid white;
-  transition: all 0.2s ease;
-}
-#hero-content button:hover .button-arrow {
-  transform: translate(25px);
-  font-size: 20px;
+  border: 1px solid #00bcf1;
+  color: #00bcf1;
   transition: all 0.2s ease;
 }
 
 #components {
-  padding-inline: 50px;
+  padding-inline: 5rem;
   text-align: center;
 }
 #components h1 {
-  color: rgb(48, 196, 255);
-  padding: 10px;
+  color: #00bcf1;
   font-weight: 500;
-  font-size: 28.5px;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-block: 3rem;
 }
 
 .image-container {
@@ -135,48 +140,39 @@ header img {
   animation: slide-in 0.3s;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-
-.image {
-  background-color: rgba(211, 211, 211, 0.246);
+.component {
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 50px;
-  height: 500px;
+  height: 450px;
   font-size: 18.5px;
   overflow: hidden;
-  gap: 20px;
 }
 .text-wrapper {
   padding: 30px;
 }
-.image h2 {
+.component h2 {
   font-weight: 550;
   padding-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.image li {
+.component li {
   line-height: 20px;
   text-wrap: wrap;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-.image img {
-  height: 250px;
+.component img {
+  max-height: 200px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.image img:hover {
+.component img:hover {
   scale: 1.05;
   transition: all 0.2s ease;
 }
@@ -212,18 +208,18 @@ header img {
 }
 
 #advantages {
-  padding-inline: 50px;
+  padding-inline: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 #advantages h1 {
-  font-size: 28.5px;
   text-align: center;
-  color: rgb(48, 196, 255);
+  color: #00bcf1;
   font-weight: 500;
-  margin-bottom: 40px;
+  font-size: 2.2rem;
+  margin-block: 3rem;
 }
 
 .teachers {
@@ -231,7 +227,7 @@ header img {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 34px;
-  background-color: rgba(211, 211, 211, 0.246);
+  background-color: #fafafa;
 }
 .teachers .left {
   flex: 1;
@@ -240,7 +236,7 @@ header img {
 .teachers .left i,
 .students .right i {
   font-size: 42px;
-  color: rgb(48, 196, 255);
+  color: #00bcf1;
 }
 
 .teachers .left li,
@@ -251,8 +247,8 @@ header img {
 
 .teachers .left h2,
 .students .right h2 {
-  font-size: 28.5px;
-  padding-block: 40px;
+  font-size: 2rem;
+  padding-block: 1rem;
   font-weight: 500;
 }
 
@@ -270,7 +266,7 @@ header img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(211, 211, 211, 0.246);
+  background-color: #fafafa;
 }
 .students .left {
   flex: 1.5;
@@ -291,13 +287,13 @@ header img {
 }
 
 hr {
-  margin-top: 100px;
-  border: 1px solid rgba(211, 211, 211, 0.378);
+  margin-top: 4rem;
+  border: 1px solid #fafafa;
 }
 
 #institutes {
   text-align: center;
-  padding: 50px;
+  padding: 2rem;
   padding-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -306,9 +302,9 @@ hr {
 }
 
 #institutes h1 {
-  font-size: 28.5px;
+  font-size: 2.2rem;
   font-weight: 500;
-  color: rgb(48, 196, 255);
+  color: #00bcf1;
   padding: 10px;
   padding-bottom: 30px;
 }
@@ -326,7 +322,7 @@ hr {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .institute-list img:hover {
-  box-shadow: rgb(48, 196, 255) 0px 2px 8px 0px;
+  box-shadow: #00bcf1 0px 2px 8px 0px;
 }
 
 footer {
@@ -373,18 +369,18 @@ footer p a {
   font-size: 42px;
 }
 
-@media only screen and (max-width: 400px) {
-  .teachers .right img {
-    display: none;
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
   }
-  .students .left img {
-    display: none;
+  to {
+    transform: translateX(0%);
   }
 }
 
 @media only screen and (max-width: 640px) {
   #hero {
-    height: 500px;
+    height: 400px;
   }
   #hero-content {
     position: absolute;
@@ -398,11 +394,6 @@ footer p a {
   #hero-content p {
     font-size: 18.5px;
     padding-top: 16px;
-  }
-  #black-filter {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, black, transparent);
   }
   .institute-list {
     grid-template-columns: 1fr;
@@ -419,6 +410,28 @@ footer p a {
     right: 20px;
     bottom: 80px;
     transform: scale(0.5);
+  }
+  .teachers .right img {
+    display: none;
+  }
+  .students .left img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  header {
+    padding-left: 1rem;
+  }
+  #hero {
+    height: 400px;
+    overflow: hidden;
+  }
+  #hero-content {
+    width: 100%;
+  }
+  .image-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
