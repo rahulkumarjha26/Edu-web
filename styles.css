@@ -117,7 +117,7 @@ header img {
   height: 600px;
   align-items: flex-start;
   padding: 0px 0px;
-  font-size: 21.5px;
+  font-size: 18.5px;
   overflow: hidden;
 }
 .image h2 {
@@ -203,7 +203,7 @@ header img {
 .teachers .left li,
 .students .right li {
   line-height: 40px;
-  font-size: 21.5px;
+  font-size: 18.5px;
 }
 
 .teachers .left h2,
