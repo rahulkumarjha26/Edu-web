@@ -81,6 +81,7 @@ header img {
   border-right: none;
   color: white;
   padding: 20px 40px;
+  font-size: 14.5px;
   cursor: pointer;
 }
 
@@ -332,11 +333,16 @@ footer p a {
   #hero-content {
     position: absolute;
     z-index: 2;
-    padding: 20px;
+    padding: 50px;
   }
   #hero-content h1 {
     font-size: 26.5px;
     padding-top: 50px;
+  }
+  #black-filter {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, black, transparent);
   }
 }
 
