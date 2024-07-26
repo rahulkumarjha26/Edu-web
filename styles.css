@@ -58,7 +58,7 @@ header img {
 #hero-content {
   position: absolute;
   z-index: 2;
-  padding: 100px;
+  padding: 75px;
 }
 #hero-content h1 {
   font-size: 48px;
@@ -329,6 +329,11 @@ footer p a {
 }
 
 @media only screen and (min-width: 375px) {
+  #hero-content {
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
+  }
   .image-container {
     flex-direction: column;
     justify-content: center;
