@@ -99,6 +99,11 @@ header img {
   border: 1px solid white;
   transition: all 0.2s ease;
 }
+#hero-content button:hover .button-arrow {
+  transform: translate(25px);
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
 
 #components {
   padding-inline: 50px;
@@ -120,12 +125,32 @@ header img {
   gap: 25px;
 }
 
+#tab-1 {
+  animation: slide-in 0.3s;
+}
+#tab-2 {
+  animation: slide-in 0.3s;
+}
+#tab-3 {
+  animation: slide-in 0.3s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
 .image {
   background-color: rgba(211, 211, 211, 0.246);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 50px;
+  height: 500px;
   font-size: 18.5px;
   overflow: hidden;
   gap: 20px;
@@ -175,9 +200,14 @@ header img {
   border-bottom: 4px solid transparent;
 }
 
-.button-list button:hover {
+.button-list button.active {
   color: rgba(20, 92, 194, 0.902);
   border-bottom: 4px solid rgba(20, 92, 194, 0.902);
+  transition: all 0.2s ease;
+}
+
+.button-list button:hover {
+  color: rgba(20, 92, 194, 0.902);
   transition: all 0.2s ease;
 }
 
