@@ -379,7 +379,7 @@ hr {
 
 .institute-list {
   display: grid;
-  width: 70%;
+  width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
   gap: 20px;
@@ -546,7 +546,7 @@ footer p a {
   }
 
   .institute-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .image-container {
     grid-template-columns: 1fr;
@@ -561,7 +561,7 @@ footer p a {
 
 @media only screen and (min-width: 768px) {
   .institute-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .image-container {
     grid-template-columns: 1fr 1fr;
@@ -570,7 +570,7 @@ footer p a {
 
 @media only screen and (min-width: 1024px) {
   .institute-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .image-container {
