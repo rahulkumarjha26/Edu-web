@@ -64,13 +64,14 @@ header {
   align-items: center;
   padding-inline: 4rem;
   position: relative;
+  transition: all 0.5s ease;
 }
 
 header img {
   object-fit: contain;
   height: 100%;
   cursor: pointer;
-  transition: 1s;
+  transition: all 1s ease;
 }
 
 #hero {
