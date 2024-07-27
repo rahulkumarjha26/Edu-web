@@ -157,7 +157,7 @@ header img {
 .component:hover {
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   cursor: pointer;
-  scale: 1.05;
+  scale: 1.02;
   transition: all 0.2s ease;
 }
 
@@ -241,6 +241,7 @@ header img {
   align-items: center;
   margin-bottom: 34px;
   background-color: #fafafa;
+  overflow: hidden;
 }
 .teachers .left {
   flex: 1;
@@ -268,6 +269,11 @@ header img {
 .teachers .right {
   flex: 1.5;
 }
+.teachers:hover .right img {
+  scale: 1.02;
+  transition: all 0.5s ease;
+}
+
 .teachers .right img {
   max-height: 500px;
   height: 100%;
@@ -280,6 +286,7 @@ header img {
   justify-content: space-between;
   align-items: center;
   background-color: #fafafa;
+  overflow: hidden;
 }
 .students .left {
   flex: 1.5;
@@ -292,6 +299,11 @@ header img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.students:hover .left img {
+  scale: 1.02;
+  transition: all 0.5s ease;
 }
 
 .text-content {
