@@ -27,7 +27,7 @@ function switchMode() {
     document.getElementById("logo").src = "./assets/logo.jpg";
     document.getElementById("logo").style.transform = "scale(1)";
     document.querySelector("main").style.backgroundColor = "#ffffff";
-    document.querySelector("footer").style.backgroundColor = "#ffffff";
+    document.querySelector("footer").style.backgroundColor = "#666666";
     document
       .querySelectorAll(".component, .teachers, .students")
       .forEach((element) => {
