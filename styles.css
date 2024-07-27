@@ -30,6 +30,7 @@ body {
 }
 .moon {
   background-color: transparent;
+  overflow: hidden;
   box-shadow: -6px 1px 0 3px #275e8e;
   border-left: 3px solid #27476d;
   border-radius: 50%;
