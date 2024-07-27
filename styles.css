@@ -59,6 +59,11 @@ header img {
   height: 100%;
   width: 100%;
 }
+#hero video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 #black-filter {
   position: absolute;
   z-index: 1;
