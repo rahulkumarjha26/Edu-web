@@ -23,7 +23,7 @@ function switchMode() {
     moon.className = "moon";
     document.body.style.backgroundColor = "rgba(211, 211, 211, 0.205)";
     document.body.style.color = "#000000";
-    document.getElementById("header").style.backgroundColor = "#ffffff";
+    document.getElementById("header").style.backgroundColor = "white";
     document.getElementById("logo").src = "./assets/logo.jpg";
     document.getElementById("logo").style.transform = "scale(1)";
     document.querySelector("main").style.backgroundColor = "#ffffff";
