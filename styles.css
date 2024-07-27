@@ -154,6 +154,7 @@ header img {
 #hero-content button:hover {
   border: 1px solid #00bcf1;
   color: #00bcf1;
+  background-color: black;
   transition: all 0.2s ease;
 }
 
