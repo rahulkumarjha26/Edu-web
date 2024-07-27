@@ -15,6 +15,37 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(211, 211, 211, 0.205);
+  transition: 1s;
+}
+
+.night-toggle {
+  width: 33px;
+  height: 33px;
+  right: 20px;
+  top: 12px;
+  position: absolute;
+}
+.night-toggle:hover {
+  cursor: pointer;
+}
+.moon {
+  background-color: transparent;
+  box-shadow: -6px 1px 0 3px #275e8e;
+  border-left: 3px solid #27476d;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  margin-top: 0px;
+  transition: 0.5s;
+}
+.sun {
+  background-color: #fdd462;
+  box-shadow: 2px 0px 0px 1px #d19c29;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  transition: 0.5s;
 }
 
 main {
@@ -30,15 +61,17 @@ header {
   height: 44px;
   display: flex;
   background-color: white;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding-left: 4rem;
+  padding-inline: 4rem;
+  position: relative;
 }
 
 header img {
   object-fit: contain;
   height: 100%;
   cursor: pointer;
+  transition: 1s;
 }
 
 #hero {
@@ -275,6 +308,7 @@ header img {
 .teachers .right {
   flex: 1.5;
   overflow: hidden;
+  display: flex;
 }
 .teachers:hover .right img {
   scale: 1.02;
@@ -298,6 +332,7 @@ header img {
 .students .left {
   flex: 1.5;
   overflow: hidden;
+  display: flex;
 }
 .students .right {
   flex: 1;

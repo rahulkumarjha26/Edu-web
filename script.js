@@ -1,3 +1,46 @@
+function switchMode() {
+  let moon = document.getElementById("moon");
+  if (moon.className === "moon") {
+    moon.className = "sun";
+    document.body.style.backgroundColor = "#141414";
+    document.body.style.color = "#e0e0e0";
+    document.getElementById("header").style.backgroundColor = "black";
+    document.getElementById("logo").src = "./assets/logo-dark.png";
+    document.getElementById("logo").style.transform = "scale(0.9)";
+    document.querySelector("main").style.backgroundColor = "#1d1d1d";
+
+    document.querySelectorAll(".institute").forEach((element) => {
+      element.style.filter = "invert(1)";
+    });
+
+    document
+      .querySelectorAll(".component, .teachers, .students")
+      .forEach((element) => {
+        element.style.backgroundColor = "#2e2e2e";
+      });
+    document.querySelector("hr").style.borderColor = "#444444";
+  } else {
+    moon.className = "moon";
+    document.body.style.backgroundColor = "#ffffff";
+    document.body.style.color = "#000000";
+    document.getElementById("header").style.backgroundColor = "#ffffff";
+    document.getElementById("logo").src = "./assets/logo.jpg";
+    document.getElementById("logo").style.transform = "scale(1)";
+    document.querySelector("main").style.backgroundColor = "#ffffff";
+
+    document
+      .querySelectorAll(".component, .teachers, .students")
+      .forEach((element) => {
+        element.style.backgroundColor = "#fafafa";
+      });
+
+    document.querySelectorAll(".institute").forEach((element) => {
+      element.style.filter = "invert(0)";
+    });
+    document.querySelector("hr").style.borderColor = "#fafafa";
+  }
+}
+
 const tab1 = document.getElementById("tab-1");
 const tab2 = document.getElementById("tab-2");
 const tab3 = document.getElementById("tab-3");
