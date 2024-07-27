@@ -430,7 +430,6 @@ footer p a {
   }
   #hero-content h1 {
     font-size: 36px;
-    padding-top: 50px;
   }
   #hero-content p {
     font-size: 18.5px;
@@ -483,7 +482,7 @@ footer p a {
   }
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 0px) {
   .image-container {
     flex-direction: column;
     justify-content: center;
