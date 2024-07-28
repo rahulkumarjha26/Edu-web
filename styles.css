@@ -143,6 +143,10 @@ header img {
   cursor: pointer;
   position: relative;
 }
+
+#hero-content button:active {
+  scale: 0.9;
+}
 #hero-content button span {
   margin-left: 8px;
 }
@@ -250,13 +254,16 @@ header img {
 .button-list button.active {
   color: rgba(20, 92, 194, 0.902);
   border-bottom: 4px solid rgba(20, 92, 194, 0.902);
-  transition: all 0.2s ease;
 }
 
 .button-list button:hover {
   color: rgba(20, 92, 194, 0.902);
   border-bottom: 4px solid rgba(20, 92, 194, 0.902);
   transition: all 0.2s ease;
+}
+
+.button-list button:active {
+  scale: 0.95;
 }
 
 #advantages {
@@ -282,6 +289,13 @@ header img {
   background-color: #fafafa;
   overflow: hidden;
 }
+
+.teachers:hover,
+.students:hover {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transition: all 0.2s ease;
+}
+
 .teachers .left {
   flex: 1;
 }
@@ -391,7 +405,7 @@ hr {
 .institute-list img {
   height: 200px;
   width: 200px;
-  animation: scroll 60s linear infinite;
+  animation: scroll 50s linear infinite;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .institute-list:hover img {
@@ -408,8 +422,11 @@ hr {
   0% {
     transform: translateX(0);
   }
+  50% {
+    transform: translateX(-500%);
+  }
   100% {
-    transform: translatex(-1000%);
+    transform: translateX(0);
   }
 }
 
