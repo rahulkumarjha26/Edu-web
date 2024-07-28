@@ -5,8 +5,9 @@ function switchMode() {
     document.body.style.backgroundColor = "#141414";
     document.body.style.color = "#e0e0e0";
     document.getElementById("header").style.backgroundColor = "black";
-    document.getElementById("logo").src = "./assets/logo-dark.png";
-    document.getElementById("logo").style.transform = "scale(0.9)";
+    document.getElementById("logo-dark").style.display = "flex";
+    document.getElementById("logo-light").style.display = "none";
+    // document.getElementById("logo-dark").style.transform = "scale(0.9)";
     document.querySelector("main").style.backgroundColor = "#1d1d1d";
     document.querySelector("footer").style.backgroundColor = "black";
     document.querySelectorAll(".institute").forEach((element) => {
@@ -24,8 +25,10 @@ function switchMode() {
     document.body.style.backgroundColor = "rgba(211, 211, 211, 0.205)";
     document.body.style.color = "#000000";
     document.getElementById("header").style.backgroundColor = "white";
-    document.getElementById("logo").src = "./assets/logo.jpg";
-    document.getElementById("logo").style.transform = "scale(1)";
+    document.getElementById("logo-dark").style.display = "none";
+    document.getElementById("logo-light").style.display = "flex";
+    // document.getElementById("logo").src = "./assets/logo.jpg";
+    // document.getElementById("logo").style.transform = "scale(1)";
     document.querySelector("main").style.backgroundColor = "#ffffff";
     document.querySelector("footer").style.backgroundColor = "#666666";
     document
@@ -40,6 +43,8 @@ function switchMode() {
     document.querySelector("hr").style.borderColor = "#fafafa";
   }
 }
+
+document.getElementById("logo-dark").style.display = "none";
 
 const tab1 = document.getElementById("tab-1");
 const tab2 = document.getElementById("tab-2");
