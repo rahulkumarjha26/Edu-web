@@ -258,7 +258,6 @@ header img {
 
 .button-list button:hover {
   color: rgba(20, 92, 194, 0.902);
-  border-bottom: 4px solid rgba(20, 92, 194, 0.902);
   transition: all 0.2s ease;
 }
 
